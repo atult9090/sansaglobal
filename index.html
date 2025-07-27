@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sansa Global | Website Services</title>
-  <link rel="stylesheet" href="styles.css" />
   <style>
     html {
       scroll-behavior: smooth;
@@ -31,7 +30,6 @@
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
-      position: relative;
     }
     nav a.active {
       border-bottom: 2px solid #fff;
@@ -47,7 +45,7 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    .section {
+    section {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
@@ -78,17 +76,6 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    .contact-info {
-      background: white;
-      margin: 2rem auto;
-      max-width: 1000px;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .contact-info h2 {
-      color: #2d6a4f;
-    }
     .contact-info p, .contact-info a {
       font-size: 1rem;
       margin: 0.5rem 0;
@@ -107,6 +94,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div><strong>Sansa Global</strong></div>
     <nav>
@@ -122,7 +110,7 @@
     <p>Affordable, beautiful websites crafted with care by Sansa Global 🌐</p>
   </section>
 
-  <section class="section" id="about">
+  <section id="about">
     <div class="card">
       <h2>💻 What We Offer</h2>
       <ul>
@@ -151,18 +139,20 @@
     </div>
   </section>
 
-  <section class="section" id="products">
+  <section id="products">
     <div class="card">
-      <h2>🌿 Products</h2>
-      <p>Our agricultural product list is expanding! Contact us to learn more or place an inquiry.</p>
+      <h2>🌿 Our Products</h2>
+      <p>We offer agricultural solutions and services tailored to farmers and exporters. Reach out for current offerings.</p>
     </div>
   </section>
 
-  <section class="contact-info" id="contact">
-    <h2>📞 Contact Details</h2>
-    <p><strong>Phone:</strong> <a href="tel:+919096064018">+91 90960 64018</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919096064018" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a></p>
-    <p><strong>Address:</strong> At/Post, Wangi No. 2, Taluka Karmala, District Solapur</p>
+  <section id="contact" class="contact-info">
+    <div class="card">
+      <h2>📞 Contact Details</h2>
+      <p><strong>Phone:</strong> <a href="tel:+919096064018">+91 90960 64018</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/919096064018" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a></p>
+      <p><strong>Address:</strong> At/Post, Wangi No. 2, Taluka Karmala, District Solapur</p>
+    </div>
   </section>
 
   <footer>
@@ -192,5 +182,6 @@
       });
     });
   </script>
+
 </body>
 </html>
