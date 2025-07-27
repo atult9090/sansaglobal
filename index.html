@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sansa Global | Website Services</title>
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     html {
       scroll-behavior: smooth;
@@ -25,9 +27,16 @@
       top: 0;
       z-index: 1000;
     }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
     nav a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
     }
@@ -35,15 +44,44 @@
       border-bottom: 2px solid #fff;
       color: #ffd700;
     }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #2d6a4f;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 1rem;
+      }
+      nav.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
     .hero {
       background-color: #40916c;
       padding: 3rem 2rem;
       color: white;
       text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
     }
     section {
       padding: 2rem;
@@ -76,28 +114,36 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    .contact-info p, .contact-info a {
-      font-size: 1rem;
-      margin: 0.5rem 0;
-      color: #333;
-      text-decoration: none;
-    }
-    .whatsapp-btn {
+
+    .whatsapp-btn-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
       background-color: #25D366;
       color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      display: inline-block;
-      margin-top: 1rem;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
       text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div><strong>Sansa Global</strong></div>
-    <nav>
+    <div class="logo">Sansa Global</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="navbar">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#products">Products</a>
@@ -105,13 +151,13 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
+  <section class="hero" id="home" data-aos="fade-in">
     <h1>Website Design & Services</h1>
     <p>Affordable, beautiful websites crafted with care by Sansa Global 🌐</p>
   </section>
 
   <section id="about">
-    <div class="card">
+    <div class="card" data-aos="fade-up">
       <h2>💻 What We Offer</h2>
       <ul>
         <li>Custom business or portfolio website</li>
@@ -121,7 +167,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
       <h2>💰 Pricing Plans</h2>
       <ul>
         <li><strong>Starter:</strong> ₹2999 – 1 page static website</li>
@@ -132,7 +178,7 @@
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7NLvrndaOrCjy7a9rz5cMIolWDT0RVtxXNte20WKpW2XaoA/viewform?usp=header" target="_blank" class="cta-button">📩 Submit Inquiry Form</a>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
       <h2>💬 Testimonials</h2>
       <p>"Sansa Global helped me launch my first export site. Super helpful and budget-friendly!" – Client from Solapur</p>
       <p>"Fast service, great designs, and proper follow-up. Highly recommend." – Farmer & Exporter</p>
@@ -140,14 +186,14 @@
   </section>
 
   <section id="products">
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
       <h2>🌿 Our Products</h2>
       <p>We offer agricultural solutions and services tailored to farmers and exporters. Reach out for current offerings.</p>
     </div>
   </section>
 
   <section id="contact" class="contact-info">
-    <div class="card">
+    <div class="card" data-aos="fade-up">
       <h2>📞 Contact Details</h2>
       <p><strong>Phone:</strong> <a href="tel:+919096064018">+91 90960 64018</a></p>
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/919096064018" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a></p>
@@ -159,15 +205,22 @@
     <p>&copy; 2025 Sansa Global. All rights reserved.</p>
   </footer>
 
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919096064018" class="whatsapp-btn-floating" target="_blank" title="Chat with us on WhatsApp">💬</a>
+
+  <!-- JS: Mobile toggle -->
   <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("show");
+    }
+
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
 
     window.addEventListener("scroll", () => {
       let current = "";
-
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 150;
+        const sectionTop = section.offsetTop - 160;
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
           current = section.getAttribute("id");
@@ -180,6 +233,15 @@
           link.classList.add("active");
         }
       });
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000
     });
   </script>
 
