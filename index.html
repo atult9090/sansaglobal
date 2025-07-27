@@ -3,144 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sansa Global | Premium Sweetcorn Export</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>Sansa Global – Website Services</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-    }
-    header {
-      background-color: #2d6a4f;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    header img {
-      height: 80px;
-    }
-    header h1 {
-      margin: 0.5rem 0 0.2rem;
-    }
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #40916c;
-      padding: 1rem 0;
-    }
-    nav a {
-      color: white;
-      margin: 0 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .product-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .product-card {
-      background: white;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .contact {
-      text-align: center;
-      background-color: #e6f4ea;
-      padding: 2rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-    }
-    .contact p {
-      margin: 0.5rem 0;
-    }
-    .whatsapp {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.2rem;
-      background-color: #25D366;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      background-color: #2d6a4f;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f2f2f2; color: #333; }
+    header { background: #1a7431; color: white; padding: 1.5rem; text-align: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 500; }
+    section { padding: 2rem; max-width: 960px; margin: auto; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-top: 2rem; }
+    h2 { color: #1a7431; }
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; background: #fafafa; }
+    .card h3 { color: #333; }
+    .card ul { padding-left: 20px; }
+    .testimonial { margin-top: 2rem; font-style: italic; color: #555; }
+    .contact-section { margin-top: 2rem; }
+    .contact-section p { margin: 0.3rem 0; }
+    footer { text-align: center; padding: 1rem; background: #1a7431; color: white; margin-top: 3rem; }
   </style>
 </head>
 <body>
   <header>
-    <img src="/logo.png" alt="Sansa Global Logo">
-    <h1>Sansa Global 🌽</h1>
-    <p>Growing Nature Globally</p>
+    <h1>Sansa Global – Website Services</h1>
+    <nav>
+      <a href="#plans">Plans</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#products">Products</a>
-    <a href="#export">Export Info</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
-
-  <section id="about">
-    <h2>Welcome to Sansa Global</h2>
-    <p>
-      We are proud Indian exporters specializing in high-quality sweetcorn. Based in Solapur, our mission is to deliver naturally grown, export-grade sweetcorn to global markets with care and consistency.
-    </p>
+  <section id="intro">
+    <h2>Grow Your Business Online</h2>
+    <p>We design stunning and affordable websites for small businesses, farmers, and exporters. From landing pages to full e-commerce, we help you build your digital presence with ease.</p>
   </section>
 
-  <section id="products">
-    <h2>Our Export Products</h2>
-    <div class="product-section">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1604668915841-26052d6c2f26" alt="Sweet Corn">
-        <h3>Sweet Corn</h3>
-        <p>Available in 200g, 400g, and 1kg packs. Vacuum-sealed for maximum freshness and export ready.</p>
+  <section id="plans">
+    <h2>Our Website Plans</h2>
+    <div class="plans">
+      <div class="card">
+        <h3>Starter</h3>
+        <p><strong>₹2500</strong> one-time</p>
+        <ul>
+          <li>1-Page Static Website</li>
+          <li>Mobile Responsive</li>
+          <li>Custom Colors + Logo</li>
+        </ul>
       </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1587813363080-b08173304aad" alt="Baby Corn">
-        <h3>Baby Sweet Corn</h3>
-        <p>Young and tender baby corn perfect for salads and cooking. Bulk and branded packs available.</p>
+      <div class="card">
+        <h3>Business</h3>
+        <p><strong>₹4500</strong> one-time</p>
+        <ul>
+          <li>5 Pages (Home, About, Products, Contact, Gallery)</li>
+          <li>WhatsApp Chat Button</li>
+          <li>SEO + Google Form</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Professional</h3>
+        <p><strong>₹8000</strong> one-time + ₹600/year renewal</p>
+        <ul>
+          <li>Custom Design with Hosting</li>
+          <li>Domain Setup</li>
+          <li>Google Map, SEO, SSL</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>📍 Address:</strong> AdPost, Wangi No. 2, Taluka Karmala, District Solapur</p>
-    <p><strong>📞 Phone:</strong> <a href="tel:+919096064018">+91 90960 64018</a></p>
-    <p><strong>📧 Email:</strong> export@sansaglobal.com</p>
-    <a class="whatsapp" href="https://wa.me/919096064018" target="_blank">📲 Chat on WhatsApp</a>
-    <p>📝 <a href="https://forms.gle/example" target="_blank">Inquiry Form (Google Form)</a></p>
+  <section id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial">
+      "I never imagined I’d have a professional site for my export business in a week! Thank you Sansa Global!" <br />– Ravi Patil, Solapur
+    </div>
+    <div class="testimonial">
+      "Very responsive team. They even helped me create a digital visiting card. Highly recommend." <br />– Pooja Traders
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>📲 <strong>WhatsApp Us:</strong> <a href="https://wa.me/919096064018">90960 64018</a></p>
+    <p>📅 <strong>Inquiry Form:</strong> <a href="https://forms.gle/your-google-form-link">Click here</a></p>
+    <p>📍 <strong>Address:</strong> AdPost, Wangi No. 2, Taluka Karmala, District Solapur</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sansa Global. All rights reserved.</p>
+    &copy; 2025 Sansa Global. All rights reserved.
   </footer>
 </body>
 </html>
