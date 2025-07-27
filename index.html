@@ -2,94 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sansa Global - Premium Sweetcorn Exporters</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sansa Global | Premium Sweetcorn Export</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      padding: 0;
+      background-color: #f7f7f7;
     }
     header {
-      background-color: #2e7d32;
-      padding: 20px;
+      background-color: #2d6a4f;
       color: white;
+      padding: 1.5rem;
       text-align: center;
     }
+    header img {
+      height: 80px;
+    }
     header h1 {
-      margin: 0;
-      font-size: 32px;
+      margin: 0.5rem 0 0.2rem;
     }
     header p {
-      font-size: 18px;
-      margin-top: 5px;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #40916c;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      padding: 40px 20px;
+      padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    .intro, .products, .contact {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #2e7d32;
-    }
-    .products-grid {
+    .product-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
     .product-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 10px;
+      padding: 1rem;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      padding: 20px;
       text-align: center;
     }
-    .footer {
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .contact {
       text-align: center;
-      padding: 20px;
-      background-color: #1b5e20;
+      background-color: #e6f4ea;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
+    .whatsapp {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
+      background-color: #25D366;
       color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #2d6a4f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="/logo.png" alt="Sansa Global Logo">
     <h1>Sansa Global 🌽</h1>
-    <p>Empowering Agriculture. Exporting Quality.</p>
+    <p>Growing Nature Globally</p>
   </header>
 
-  <section class="intro">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#products">Products</a>
+    <a href="#export">Export Info</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section id="about">
     <h2>Welcome to Sansa Global</h2>
     <p>
-      We are proud Indian exporters specializing in high-quality sweetcorn. Based in Solapur, our mission is to deliver naturally grown, export-grade sweetcorn to global markets.
+      We are proud Indian exporters specializing in high-quality sweetcorn. Based in Solapur, our mission is to deliver naturally grown, export-grade sweetcorn to global markets with care and consistency.
     </p>
   </section>
 
-  <section class="products">
-    <h2>Our Export Product</h2>
-    <div class="products-grid">
+  <section id="products">
+    <h2>Our Export Products</h2>
+    <div class="product-section">
       <div class="product-card">
-        <h3>Premium Sweetcorn</h3>
-        <p>Fresh, juicy, and grown with care. Packed under global standards. Available for bulk export.</p>
+        <img src="https://images.unsplash.com/photo-1604668915841-26052d6c2f26" alt="Sweet Corn">
+        <h3>Sweet Corn</h3>
+        <p>Available in 200g, 400g, and 1kg packs. Vacuum-sealed for maximum freshness and export ready.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1587813363080-b08173304aad" alt="Baby Corn">
+        <h3>Baby Sweet Corn</h3>
+        <p>Young and tender baby corn perfect for salads and cooking. Bulk and branded packs available.</p>
       </div>
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p><strong>Company:</strong> Sansa Global</p>
-    <p><strong>Phone:</strong> +91 90960 64018</p>
-    <p><strong>Address:</strong> AdPost, Wangi No. 2, Taluka Karmala, District Solapur, Maharashtra, India</p>
-    <p><strong>Email:</strong> info@sansaglobal.com</p>
+    <p><strong>📍 Address:</strong> AdPost, Wangi No. 2, Taluka Karmala, District Solapur</p>
+    <p><strong>📞 Phone:</strong> <a href="tel:+919096064018">+91 90960 64018</a></p>
+    <p><strong>📧 Email:</strong> export@sansaglobal.com</p>
+    <a class="whatsapp" href="https://wa.me/919096064018" target="_blank">📲 Chat on WhatsApp</a>
+    <p>📝 <a href="https://forms.gle/example" target="_blank">Inquiry Form (Google Form)</a></p>
   </section>
 
-  <div class="footer">
-    &copy; 2025 Sansa Global. All Rights Reserved.
-  </div>
+  <footer>
+    <p>&copy; 2025 Sansa Global. All rights reserved.</p>
+  </footer>
 </body>
 </html>
