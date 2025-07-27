@@ -6,6 +6,9 @@
   <title>Sansa Global | Website Services</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -19,12 +22,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
+    }
+    nav a.active {
+      border-bottom: 2px solid #fff;
+      color: #ffd700;
     }
     .hero {
       background-color: #40916c;
@@ -106,12 +117,12 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <h1>Website Design & Services</h1>
     <p>Affordable, beautiful websites crafted with care by Sansa Global 🌐</p>
   </section>
 
-  <section class="section">
+  <section class="section" id="about">
     <div class="card">
       <h2>💻 What We Offer</h2>
       <ul>
@@ -140,7 +151,14 @@
     </div>
   </section>
 
-  <section class="contact-info">
+  <section class="section" id="products">
+    <div class="card">
+      <h2>🌿 Products</h2>
+      <p>Our agricultural product list is expanding! Contact us to learn more or place an inquiry.</p>
+    </div>
+  </section>
+
+  <section class="contact-info" id="contact">
     <h2>📞 Contact Details</h2>
     <p><strong>Phone:</strong> <a href="tel:+919096064018">+91 90960 64018</a></p>
     <p><strong>WhatsApp:</strong> <a href="https://wa.me/919096064018" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a></p>
@@ -150,5 +168,29 @@
   <footer>
     <p>&copy; 2025 Sansa Global. All rights reserved.</p>
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
